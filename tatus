@@ -1,0 +1,39 @@
+[1mdiff --git a/calculator/__init__.py b/calculator/__init__.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8233b15[m
+[1m--- /dev/null[m
+[1m+++ b/calculator/__init__.py[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m"""Arithmetic functions that return results for callers and tests."""[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef add(a, b):[m
+[32m+[m[32m    return a + b[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef subtract(a, b):[m
+[32m+[m[32m    return a - b[m
+\ No newline at end of file[m
+[1mdiff --git a/tests/operations/test_add.py b/tests/operations/test_add.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8340b43[m
+[1m--- /dev/null[m
+[1m+++ b/tests/operations/test_add.py[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32mfrom calculator import add[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_add():[m
+[32m+[m[32m    result = add(2, 3)[m
+[32m+[m[32m    assert result == 5[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_add_zero():[m
+[32m+[m[32m    result = add(7, 0)[m
+[32m+[m[32m    assert result == 7[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_add_negative():[m
+[32m+[m[32m    result = add(-4, 1)[m
+[32m+[m[32m    assert result == -3[m
+\ No newline at end of file[m
